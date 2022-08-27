@@ -12,7 +12,7 @@ import static io.restassured.RestAssured.given;
 
 public class StreamApiExamples {
 
-    public List<TickerData> getTickers(){
+    public List<TickerData> getTickers() {
         return given()
                 .contentType(ContentType.JSON)
                 .when()
@@ -20,6 +20,7 @@ public class StreamApiExamples {
                 .then().log().body()
                 .extract().jsonPath().getList("data.ticker",TickerData.class);
     }
+    
     @Test
     public void checkCrypto(){
         List<TickerData> usdTickers = getTickers()
