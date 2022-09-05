@@ -22,7 +22,7 @@ public class StreamApiExamples {
     }
     
     @Test
-    public void checkCrypto(){
+    public void checkCrypto() {
         List<TickerData> usdTickers = getTickers()
                 .stream()
                 .filter(x->x.getSymbol().endsWith("USDT"))
@@ -32,7 +32,7 @@ public class StreamApiExamples {
     }
 
     @Test
-    public void sortHighToLow(){
+    public void sortHighToLow() {
         List<TickerData> highToLow = getTickers()
                 .stream()
                 .filter(x->x.getSymbol().endsWith("USDT"))
@@ -51,14 +51,14 @@ public class StreamApiExamples {
     }
 
     @Test
-    public void sortLowToHigh(){
+    public void sortLowToHigh() {
         List<TickerData> lowToHigh = getTickers().stream().filter(x->x.getSymbol().endsWith("USDT"))
                 .sorted(new TickerComparatorLow()).limit(10).collect(Collectors.toList());
         int a = 0;
     }
 
     @Test
-    public void map(){
+    public void map() {
         Map<String, Float> usd = new HashMap<>();
         // List<String> lowerCases = getTickers().stream().map(x->x.getSymbol().toLowerCase()).collect(Collectors.toList());
         // getTickers().forEach(x->usd.put(x.getSymbol(),Float.parseFloat(x.getChangeRate())));
