@@ -60,8 +60,12 @@ public class StreamApiExamples {
     @Test
     public void map() {
         Map<String, Float> usd = new HashMap<>();
-        // List<String> lowerCases = getTickers().stream().map(x->x.getSymbol().toLowerCase()).collect(Collectors.toList());
-        // getTickers().forEach(x->usd.put(x.getSymbol(),Float.parseFloat(x.getChangeRate())));
+        
+        /**
+         * List<String> lowerCases = getTickers().stream().map(x->x.getSymbol().toLowerCase()).collect(Collectors.toList());
+         * getTickers().forEach(x->usd.put(x.getSymbol(),Float.parseFloat(x.getChangeRate())));
+         */
+        
         List<TickerShort> shortList = new ArrayList<>();
         getTickers().forEach(x->shortList.add(new TickerShort(x.getSymbol(),Float.parseFloat(x.getChangeRate()))));
         int a = 0;
