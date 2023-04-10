@@ -1,4 +1,4 @@
-package api.kuCoinApi;
+package api.ticker;
 
 public class TickerData {
     private String symbol;

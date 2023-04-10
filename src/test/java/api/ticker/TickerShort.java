@@ -1,4 +1,4 @@
-package api.kuCoinApi;
+package api.ticker;
 
 public class TickerShort {
     private String name;
