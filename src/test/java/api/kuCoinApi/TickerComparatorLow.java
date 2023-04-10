@@ -1,4 +1,4 @@
-package api.ticker;
+package api.kuCoinApi;
 
 import java.util.Comparator;
 
